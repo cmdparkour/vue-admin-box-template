@@ -1,0 +1,51 @@
+:root {
+  // 主题色
+  --system-primary-color: #409eff; // 可做背景色和文本色，用做背景色时，需要和--system-primary-text-color配合使用，避免文件颜色和主题色冲突
+  --system-primary-text-color: #fff; // 主题色作为背景色时使用
+
+  // logo颜色相关
+  --system-logo-color: #f1f1f1;
+  --system-logo-background: #263445;
+
+  // 菜单颜色相关
+  --system-menu-text-color: #bfcbd9;
+  --system-menu-background: #28415a;
+  --system-menu-children-background: #1f2d3d;
+  --system-menu-submenu-active-color: #fff; 
+  --system-menu-hover-background: #203448;
+
+  // header区域
+  --system-header-background: #fff;
+  --system-header-text-color: #bbb;
+  --system-header-breadcrumb-text-color: #97a8be;
+  --system-header-item-hover-color: #000;
+  --system-header-border-color: #d8dce5;
+  --system-header-tab-background: #fff;
+
+  // contaier区域，父框架
+  --system-container-background: #f0f2f5;
+  --system-container-main-background: #fff;
+
+  // 页面区域, 这一块是你在自己写的文件中使用主题，核心需要关注的地方
+  --system-page-background: #fff; // 主背景
+  --system-page-color: #303133; // 主要的文本颜色
+  --system-page-tip-color: rgba(0, 0, 0, 0.45); // 协助展示的文本颜色
+  --system-page-border-color: #000; // 通用的边框配置色，便于主题扩展
+  
+  // element主题色修改
+  --el-color-primary: var(--system-primary-color);
+}
+
+// 进度条颜色修改为主题色
+body #nprogress .bar {
+  background-color: var(--system-primary-color);
+}
+body #nprogress .peg {
+  box-shadow: 0 0 10px var(--system-primary-color), 0 0 5px var(--system-primary-color);
+}
+body #nprogress .spinner-icon {
+  border-top-color: var(--system-primary-color);
+  border-left-color: var(--system-primary-color);
+}
+
+@import './modules/dark.scss';
