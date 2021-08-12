@@ -18,7 +18,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import { defineComponent, ref, watch } from 'vue'
 import drag from '@/directive/drag/index'
 export default defineComponent({

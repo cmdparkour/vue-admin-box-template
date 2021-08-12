@@ -18,7 +18,7 @@
   </el-dropdown>
 </template>
 
-<script lang="ts">
+<script>
 import { defineComponent, computed, unref } from 'vue'
 import { useRoute } from 'vue-router'
 import { useStore } from 'vuex'

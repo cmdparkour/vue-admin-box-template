@@ -29,7 +29,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import { defineComponent, ref, inject } from "vue";
 import { getCategory } from "@/api/table";
 import { debounce } from "throttle-debounce";

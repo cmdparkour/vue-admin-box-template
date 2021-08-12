@@ -38,10 +38,7 @@
   </el-container>
 </template>
 
-<script lang="ts">
-import {
-  defineComponent,
-  computed,
+<script> computed,
   onBeforeMount,
   ref,
   getCurrentInstance,

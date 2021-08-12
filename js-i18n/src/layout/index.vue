@@ -38,7 +38,7 @@
   </el-container>
 </template>
 
-<script lang="ts">
+<script>
 import {
   defineComponent,
   computed,

@@ -34,8 +34,7 @@
   </header>
 </template>
 
-<script lang="ts">
-import { defineComponent, computed, reactive } from 'vue'
+<script>puted, reactive } from 'vue'
 import { useStore } from 'vuex'
 import { useRouter, useRoute } from 'vue-router'
 import FullScreen from './functionList/fullscreen.vue'

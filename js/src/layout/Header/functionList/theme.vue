@@ -42,8 +42,7 @@
   </el-drawer>
 </template>
 
-<script lang="ts">
-import { defineComponent, ref, reactive, computed, watch } from 'vue'
+<script>, reactive, computed, watch } from 'vue'
 import { useStore } from 'vuex'
 import themeIcon from './theme/theme-icon.vue'
 import themeColor from './theme/theme-color.vue'

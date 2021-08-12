@@ -31,8 +31,7 @@
   </div>
 </template>
 
-<script lang="ts">
-import Item from './item.vue'
+<script>
 import { defineComponent, computed, unref, watch, reactive, ref, nextTick } from 'vue'
 import { useStore } from 'vuex'
 import { useRoute, useRouter } from 'vue-router'

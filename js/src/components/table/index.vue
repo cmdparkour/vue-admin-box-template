@@ -32,8 +32,7 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent, reactive } from 'vue'
+<script>ctive } from 'vue'
 import { Page } from '@/components/table/type'
 export default defineComponent({
   props: {

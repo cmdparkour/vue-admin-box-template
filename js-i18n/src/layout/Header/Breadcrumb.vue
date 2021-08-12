@@ -14,7 +14,7 @@
   </el-breadcrumb>
 </template>
 
-<script lang="ts">
+<script>
 import { ref, defineComponent, watch } from "vue";
 import { useRoute, useRouter, RouteLocationMatched } from "vue-router";
 export default defineComponent({

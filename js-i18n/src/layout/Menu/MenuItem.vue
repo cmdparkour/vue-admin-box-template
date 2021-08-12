@@ -29,7 +29,7 @@
   </template>
 </template>
 
-<script lang="ts">
+<script>
 import { defineComponent, computed, watch } from 'vue'
 import appLink from './Link.vue'
 export default defineComponent({

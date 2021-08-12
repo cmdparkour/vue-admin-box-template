@@ -5,7 +5,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import { defineComponent, computed } from 'vue'
 import { useStore } from 'vuex'
 import { systemTitle } from '@/config'

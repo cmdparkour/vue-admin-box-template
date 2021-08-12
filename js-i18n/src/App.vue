@@ -4,7 +4,7 @@
   </el-config-provider>
 </template>
 
-<script lang="ts">
+<script>
 import { defineComponent, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 export default defineComponent({

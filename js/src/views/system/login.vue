@@ -36,8 +36,7 @@
   </div>
 </template>
 
-<script lang="ts">
-import { systemTitle } from '@/config'
+<script>@/config'
 import { defineComponent, ref, reactive } from 'vue'
 import { useStore } from 'vuex'
 import { useRouter, useRoute } from 'vue-router'

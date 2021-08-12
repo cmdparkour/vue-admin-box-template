@@ -18,8 +18,7 @@
   </el-dropdown>
 </template>
 
-<script lang="ts">
-import { defineComponent, computed, unref } from 'vue'
+<script>puted, unref } from 'vue'
 import { useRoute } from 'vue-router'
 import { useStore } from 'vuex'
 export default defineComponent({

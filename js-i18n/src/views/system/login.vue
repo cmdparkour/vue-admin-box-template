@@ -39,7 +39,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import { systemTitle } from '@/config'
 import { defineComponent, ref, reactive } from 'vue'
 import { useStore } from 'vuex'

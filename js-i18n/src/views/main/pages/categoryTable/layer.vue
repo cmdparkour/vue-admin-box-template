@@ -21,7 +21,7 @@
   </Layer>
 </template>
 
-<script lang="ts">
+<script>
 import { defineComponent, ref } from 'vue'
 import { add, update } from '@/api/table'
 import { selectData, radioData } from './enum'

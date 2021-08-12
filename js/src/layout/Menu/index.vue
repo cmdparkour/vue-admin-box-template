@@ -16,8 +16,7 @@
   </el-scrollbar>
 </template>
 
-<script lang="ts">
-import { defineComponent, computed, onMounted } from 'vue'
+<script>puted, onMounted } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import { useStore } from 'vuex'
 import MenuItem from './MenuItem.vue'
@@ -57,9 +56,6 @@ export default defineComponent({
   }
   .layout-menu {
     width: 100%;
-    flex: 1;
-    height: 0;
-    overflow-y: auto;
     &.collapse {
       margin-left: 0px;
     }

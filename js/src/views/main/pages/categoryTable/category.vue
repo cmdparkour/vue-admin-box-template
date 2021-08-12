@@ -29,8 +29,7 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent, ref, inject } from "vue";
+<script>, inject } from "vue";
 import { getCategory } from "@/api/table";
 import { debounce } from "throttle-debounce";
 export default defineComponent({

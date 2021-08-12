@@ -24,7 +24,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import type { Ref } from "vue";
 import { defineComponent, ref, inject, nextTick } from "vue";
 import { getTree } from "@/api/table";

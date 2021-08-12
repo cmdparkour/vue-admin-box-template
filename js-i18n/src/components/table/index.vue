@@ -32,7 +32,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import { defineComponent, reactive } from 'vue'
 export default defineComponent({
   props: {

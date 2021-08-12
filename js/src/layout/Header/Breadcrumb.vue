@@ -14,8 +14,7 @@
   </el-breadcrumb>
 </template>
 
-<script lang="ts">
-import { ref, defineComponent, watch } from "vue";
+<script>, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
 export default defineComponent({
   name: "BreadCrumb",
