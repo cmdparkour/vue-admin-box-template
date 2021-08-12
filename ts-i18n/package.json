@@ -9,7 +9,6 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "@kangc/v-md-editor": "^2.3.5",
     "@vueuse/core": "^4.10.0",
     "axios": "^0.21.1",
     "element-plus": "^1.0.2-beta.48",
