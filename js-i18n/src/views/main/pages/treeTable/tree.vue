@@ -25,18 +25,17 @@
 </template>
 
 <script>
-import type { Ref } from "vue";
 import { defineComponent, ref, inject, nextTick } from "vue";
 import { getTree } from "@/api/table";
 export default defineComponent({
   setup() {
     let data = ref([]);
-    const tree: Ref<any|null> = ref(null)
+    const tree = ref(null)
     const defaultProps = {
       children: "children",
       label: "label",
     };
-    const active: any = inject("active");
+    const active = inject("active");
     const getTreeData = () => {
       let params = {};
       getTree(params).then((res) => {
@@ -47,7 +46,7 @@ export default defineComponent({
         })
       });
     };
-    const handleNodeClick = (row: any) => {
+    const handleNodeClick = (row) => {
       active.value = row;
     };
     getTreeData();

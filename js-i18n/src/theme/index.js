@@ -1,5 +1,6 @@
 export const style = {
   'default': {
+    name: 'message.system.setting.style.default', // 对应国际化文件使用的数据
     menu: {
       textColor: '#bfcbd9',
       background: '#28415a',
@@ -31,6 +32,7 @@ export const style = {
     }
   },
   'light': {
+    name: 'message.system.setting.style.light',
     menu: {
       textColor: '#272727',
       background: '#fff',
@@ -62,6 +64,7 @@ export const style = {
     }
   },
   'dark': {
+    name: 'message.system.setting.style.dark',
     menu: {
       textColor: '#bbb',
       background: '#18181c',

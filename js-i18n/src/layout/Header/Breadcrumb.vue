@@ -16,7 +16,7 @@
 
 <script>
 import { ref, defineComponent, watch } from "vue";
-import { useRoute, useRouter, RouteLocationMatched } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 export default defineComponent({
   name: "BreadCrumb",
   setup() {

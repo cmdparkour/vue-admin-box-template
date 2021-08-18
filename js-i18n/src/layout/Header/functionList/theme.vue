@@ -10,9 +10,18 @@
     direction="rtl">
       <h3>{{ $t('message.system.setting.style.name') }}</h3>
       <div class="theme-box">
-        <theme-icon v-model:active="state.style" :tip="$t('message.system.setting.style.default')"></theme-icon>
-        <theme-icon v-model:active="state.style" name="light" :tip="$t('message.system.setting.style.light')" logo="#fff" menu="#fff"></theme-icon>
-        <theme-icon v-model:active="state.style" name="dark" :tip="$t('message.system.setting.style.dark')" logo="#1f1f1f" menu="#1f1f1f" header="#1f1f1f" main="#000" activeColor="#fff"></theme-icon>
+        <theme-icon
+          v-model:active="state.style"
+          v-for="(row, index) in style"
+          :key="index"
+          :name="index"
+          :tip="$t(row.name)"
+          :logo="row.logo.background"
+          :menu="row.menu.background"
+          :header="row.header.background"
+          :main="row.container.background"
+          :activeColor="row.page.color"
+        ></theme-icon>
       </div>
       <h3>{{ $t('message.system.setting.primaryColor.name') }}</h3>
       <div class="theme-box">
@@ -81,7 +90,7 @@ export default defineComponent({
       // 设置主题色
       body.style.setProperty('--system-primary-color', state.primaryColor)
       for (let i in userTheme) {
-        const item = userTheme[i as keyof Colors]
+        const item = userTheme[i]
         for (let y in item) {
           let cssVarName = '--system-' + i + '-' + y.replace(/([A-Z])/g, "-$1").toLowerCase()
           body.style.setProperty(cssVarName, item[y])
@@ -118,6 +127,7 @@ export default defineComponent({
       drawer,
       options,
       state,
+      style,
       themeColorArr,
       drawerChange,
       change

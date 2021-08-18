@@ -37,7 +37,6 @@ import { defineComponent, computed, unref, watch, reactive, ref, nextTick } from
 import { useStore } from 'vuex'
 import { useRoute, useRouter } from 'vue-router'
 import tabsHook from './tabsHook'
-import { log } from 'util'
 
 export default defineComponent({
   components: {
@@ -47,7 +46,7 @@ export default defineComponent({
     const store = useStore()
     const route = useRoute()
     const router = useRouter()
-    const scrollbarDom: Ref<ElScrollbar|null> = ref(null)
+    const scrollbarDom = ref(null)
     const allRoutes = router.options.routes
     const defaultMenu = {
       path: '/dashboard',
@@ -56,15 +55,15 @@ export default defineComponent({
     const contentFullScreen = computed(() => store.state.app.contentFullScreen)
     const currentDisabled = computed(() => route.path === defaultMenu.path)
 
-    let activeMenu: any = reactive({ path: '' })
+    let activeMenu = reactive({ path: '' })
     let menuList = ref(tabsHook.getItem())
     if (menuList.value.length === 0) { // 判断之前有没有调用过
       addMenu(defaultMenu)
     } 
-    watch(menuList.value, (newVal: []) => {
+    watch(menuList.value, (newVal) => {
       tabsHook.setItem(newVal)
     })
-    watch(menuList, (newVal: []) => {
+    watch(menuList, (newVal) => {
       tabsHook.setItem(newVal)
     })
     router.afterEach(() => {
@@ -78,17 +77,9 @@ export default defineComponent({
     }
     // 当前页面组件重新加载
     function pageReload() {
-      const self: any = route.matched[route.matched.length-1].instances.default
-      // console.log(route.matched);
+      const self = route.matched[route.matched.length-1].instances.default
       
       self.handleReload();
-      // const { fullPath, meta, name } = unref(route);
-      // if (meta.cache && name) {
-      //   store.commit('keepAlive/delKeepAliveComponentsName', name)
-      // }
-      // router.replace({
-      //   path: "/redirect" + fullPath
-      // });
     }
 
     // 关闭当前标签，首页不关闭
