@@ -20,7 +20,7 @@ export default ({ command }: ConfigEnv): UserConfigExport => {
       alias
     },
     server: {
-      port: 3001,
+      port: 3005,
       host: '0.0.0.0',
       open: true,
       proxy: { // 代理配置

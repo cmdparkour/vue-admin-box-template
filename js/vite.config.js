@@ -19,7 +19,7 @@ export default ({ command }) => {
       alias
     },
     server: {
-      port: 3001,
+      port: 3002,
       host: '0.0.0.0',
       open: true,
       proxy: { // 代理配置
