@@ -9,7 +9,8 @@
   </div>
 </template>
 
-<script>, provide } from 'vue'
+<script>
+import { defineComponent, ref, provide } from 'vue'
 import Category from './tree.vue'
 import myTable from './my-table.vue'
 export default defineComponent({

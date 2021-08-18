@@ -1,6 +1,7 @@
 
 export const style = {
   'default': {
+    name: '默认菜单风格',
     menu: {
       textColor: '#bfcbd9',
       background: '#28415a',
@@ -32,6 +33,7 @@ export const style = {
     }
   },
   'light': {
+    name: '亮色菜单风格',
     menu: {
       textColor: '#272727',
       background: '#fff',
@@ -63,6 +65,7 @@ export const style = {
     }
   },
   'dark': {
+    name: '暗色菜单风格',
     menu: {
       textColor: '#bbb',
       background: '#18181c',

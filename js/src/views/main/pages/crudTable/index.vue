@@ -45,13 +45,12 @@
   </div>
 </template>
 
-<script>, reactive } from 'vue'
+<script>
+import { defineComponent, ref, reactive } from 'vue'
 import Table from '@/components/table/index.vue'
-import { Page } from '@/components/table/type'
 import { getData, del } from '@/api/table'
 import Layer from './layer.vue'
 import { ElMessage } from 'element-plus'
-import type { LayerInterface } from '@/components/layer/index.vue'
 import { selectData, radioData } from './enum'
 export default defineComponent({
   name: 'crudTable',
@@ -65,13 +64,13 @@ export default defineComponent({
       input: ''
     })
     // 弹窗控制器
-    const layer: LayerInterface = reactive({
+    const layer = reactive({
       show: false,
       title: '新增',
       showButton: true
     })
     // 分页参数, 供table使用
-    const page: Page = reactive({
+    const page = reactive({
       index: 1,
       size: 20,
       total: 0

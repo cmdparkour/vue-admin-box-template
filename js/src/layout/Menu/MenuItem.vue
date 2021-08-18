@@ -29,7 +29,8 @@
   </template>
 </template>
 
-<script>puted, watch } from 'vue'
+<script>
+import { defineComponent, computed } from 'vue'
 import appLink from './Link.vue'
 export default defineComponent({
   name: 'menu-item',

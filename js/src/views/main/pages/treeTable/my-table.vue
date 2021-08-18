@@ -45,7 +45,8 @@
   </div>
 </template>
 
-<script>, reactive, inject, watch } from 'vue'
+<script>
+import { defineComponent, ref, reactive, inject, watch } from 'vue'
 import Table from '@/components/table/index.vue'
 import { getData, del } from '@/api/table'
 import Layer from './layer.vue'

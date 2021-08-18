@@ -76,7 +76,7 @@ export default defineComponent({
     }
     // 当前页面组件重新加载
     function pageReload() {
-      const self: any = route.matched[route.matched.length-1].instances.default
+      const self = route.matched[route.matched.length-1].instances.default
       // console.log(route.matched);
       
       self.handleReload();
@@ -153,9 +153,9 @@ export default defineComponent({
     function setPosition() {
       if (scrollbarDom.value) {
         const domBox = {
-          scrollbar: scrollbarDom.value.scrollbar.querySelector('.el-scrollbar__wrap ') as HTMLDivElement,
-          activeDom: scrollbarDom.value.scrollbar.querySelector('.active') as HTMLDivElement,
-          activeFather: scrollbarDom.value.scrollbar.querySelector('.el-scrollbar__view') as HTMLDivElement
+          scrollbar: scrollbarDom.value.scrollbar.querySelector('.el-scrollbar__wrap '),
+          activeDom: scrollbarDom.value.scrollbar.querySelector('.active'),
+          activeFather: scrollbarDom.value.scrollbar.querySelector('.el-scrollbar__view')
         }
         for (let i in domBox) {
           if (!domBox[i]) {

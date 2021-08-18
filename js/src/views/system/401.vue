@@ -15,7 +15,8 @@
   </div>
 </template>
 
-<script>om 'vue'
+<script>
+import { defineComponent } from 'vue'
 import first from "@/assets/images/401.gif"
 export default defineComponent({
   setup() {

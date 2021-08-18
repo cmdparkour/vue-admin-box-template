@@ -45,13 +45,12 @@
   </div>
 </template>
 
-<script>, reactive, inject, watch } from 'vue'
+<script>
+import { defineComponent, ref, reactive, inject, watch } from 'vue'
 import Table from '@/components/table/index.vue'
-import { Page } from '@/components/table/type'
 import { getData, del } from '@/api/table'
 import Layer from './layer.vue'
 import { ElMessage } from 'element-plus'
-import type { LayerInterface } from '@/components/layer/index.vue'
 import { selectData, radioData } from './enum'
 export default defineComponent({
   components: {
@@ -64,27 +63,27 @@ export default defineComponent({
       input: ''
     })
     // 弹窗控制器
-    const layer: LayerInterface = reactive({
+    const layer = reactive({
       show: false,
       title: '新增',
       showButton: true
     })
     // 分页参数, 供table使用
-    const page: Page = reactive({
+    const page = reactive({
       index: 1,
       size: 20,
       total: 0
     })
-    const activeCategory: any = inject('active')
+    const activeCategory = inject('active')
     const loading = ref(true)
     const tableData = ref([])
     const chooseData = ref([])
-    const handleSelectionChange = (val: []) => {
+    const handleSelectionChange = (val) => {
       chooseData.value = val
     }
     // 获取表格数据
     // params <init> Boolean ，默认为false，用于判断是否需要初始化分页
-    const getTableData = (init: boolean) => {
+    const getTableData = (init) => {
       loading.value = true
       if (init) {
         page.index = 1
@@ -119,9 +118,9 @@ export default defineComponent({
       })
     }
     // 删除功能
-    const handleDel = (data: object[]) => {
+    const handleDel = (data) => {
       let params = {
-        ids: data.map((e:any)=> {
+        ids: data.map((e)=> {
           return e.id
         }).join(',')
       }
@@ -141,7 +140,7 @@ export default defineComponent({
       delete layer.row
     }
     // 编辑弹窗功能
-    const handleEdit = (row: object) => {
+    const handleEdit = (row) => {
       layer.title = '编辑数据'
       layer.row = row
       layer.show = true

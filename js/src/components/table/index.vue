@@ -32,8 +32,8 @@
   </div>
 </template>
 
-<script>ctive } from 'vue'
-import { Page } from '@/components/table/type'
+<script>
+import { defineComponent } from 'vue'
 export default defineComponent({
   props: {
     data: { type: Array, default: () => [] }, // 数据源

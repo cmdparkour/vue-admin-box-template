@@ -39,13 +39,7 @@
 </template>
 
 <script>
-import {
-  defineComponent,
-  computed,
-  onBeforeMount,
-  ref,
-  getCurrentInstance,
-} from "vue";
+import { defineComponent, computed, onBeforeMount } from "vue";
 import { useStore } from "vuex";
 import { useRouter } from "vue-router";
 import { useEventListener } from "@vueuse/core";

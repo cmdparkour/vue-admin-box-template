@@ -29,7 +29,8 @@
   </div>
 </template>
 
-<script>, inject } from "vue";
+<script>
+import { defineComponent, ref, inject } from "vue";
 import { getCategory } from "@/api/table";
 import { debounce } from "throttle-debounce";
 export default defineComponent({
@@ -44,7 +45,7 @@ export default defineComponent({
     let list = ref([]);
     let firstLoading = ref(true);
     let loading = ref(true);
-    let active: any = inject('active');
+    let active = inject('active');
     let nomore = ref(false)
     const getCategoryData = (init) => {
       loading.value = true;

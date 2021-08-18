@@ -5,7 +5,8 @@
   </div>
 </template>
 
-<script>puted } from 'vue'
+<script>
+import { defineComponent, computed } from 'vue'
 import { useStore } from 'vuex'
 import { systemTitle } from '@/config'
 export default defineComponent({

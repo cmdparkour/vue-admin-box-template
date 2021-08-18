@@ -14,7 +14,8 @@
   </Layer>
 </template>
 
-<script> } from 'vue'
+<script>
+import { defineComponent, ref } from 'vue'
 import { ElMessage } from 'element-plus'
 import { useStore } from 'vuex'
 import { passwordChange } from '@/api/user'

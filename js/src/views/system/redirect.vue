@@ -1,7 +1,8 @@
 <template>
   <div></div>
 </template>
-<script>ef } from "vue";
+<script>
+import { defineComponent, unref } from "vue";
 import { useRouter } from "vue-router";
 export default defineComponent({
   name: "Redirect",

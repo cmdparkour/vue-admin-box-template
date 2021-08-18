@@ -21,7 +21,8 @@
   </Layer>
 </template>
 
-<script> } from 'vue'
+<script>
+import { defineComponent, ref } from 'vue'
 import { add, update } from '@/api/table'
 import { selectData, radioData } from './enum'
 import Layer from '@/components/layer/index.vue'
@@ -87,7 +88,7 @@ export default defineComponent({
       }
     },
     // 新增提交事件
-    addForm(params: object) {
+    addForm(params) {
       add(params)
       .then(res => {
         this.$message({
@@ -99,7 +100,7 @@ export default defineComponent({
       })
     },
     // 编辑提交事件
-    updateForm(params: object) {
+    updateForm(params) {
       update(params)
       .then(res => {
         this.$message({

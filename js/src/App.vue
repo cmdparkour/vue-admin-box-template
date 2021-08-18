@@ -4,7 +4,8 @@
   </el-config-provider>
 </template>
 
-<script>om 'vue'
+<script>
+import { defineComponent } from 'vue'
 import locale from 'element-plus/lib/locale/lang/zh-cn'
 export default defineComponent({
   name: 'App',

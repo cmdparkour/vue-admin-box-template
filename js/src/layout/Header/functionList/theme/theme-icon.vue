@@ -19,7 +19,8 @@
   
 </template>
 
-<script>om 'vue'
+<script>
+import { defineComponent } from 'vue'
 export default defineComponent({
   props: {
     name: {

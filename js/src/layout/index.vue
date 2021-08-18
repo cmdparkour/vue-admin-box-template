@@ -38,11 +38,8 @@
   </el-container>
 </template>
 
-<script> computed,
-  onBeforeMount,
-  ref,
-  getCurrentInstance,
-} from "vue";
+<script>
+import { computed, onBeforeMount } from "vue";
 import { useStore } from "vuex";
 import { useRouter } from "vue-router";
 import { useEventListener } from "@vueuse/core";

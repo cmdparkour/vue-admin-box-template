@@ -42,12 +42,12 @@
   </el-drawer>
 </template>
 
-<script>, reactive, computed, watch } from 'vue'
+<script>
+import { defineComponent, ref, reactive, computed, watch } from 'vue'
 import { useStore } from 'vuex'
 import themeIcon from './theme/theme-icon.vue'
 import themeColor from './theme/theme-color.vue'
 import { style } from '@/theme/index'
-import { useI18n } from 'vue-i18n'
 
 export default defineComponent({
   components: {

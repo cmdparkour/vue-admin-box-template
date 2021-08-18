@@ -16,7 +16,8 @@
   </el-scrollbar>
 </template>
 
-<script>puted, onMounted } from 'vue'
+<script>
+import { defineComponent, computed, onMounted } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import { useStore } from 'vuex'
 import MenuItem from './MenuItem.vue'
