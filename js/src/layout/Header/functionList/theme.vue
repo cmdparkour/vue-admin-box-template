@@ -10,9 +10,18 @@
     direction="rtl">
       <h3>整体风格设置</h3>
       <div class="theme-box">
-        <theme-icon v-model:active="state.style" tip="默认菜单风格"></theme-icon>
-        <theme-icon v-model:active="state.style" name="light" tip="亮色菜单风格" logo="#fff" menu="#fff"></theme-icon>
-        <theme-icon v-model:active="state.style" name="dark" tip="暗色菜单风格" logo="#1f1f1f" menu="#1f1f1f" header="#1f1f1f" main="#000" activeColor="#fff"></theme-icon>
+        <theme-icon
+          v-model:active="state.style"
+          v-for="(row, index) in style"
+          :key="index"
+          :name="index"
+          :tip="row.name"
+          :logo="row.logo.background"
+          :menu="row.menu.background"
+          :header="row.header.background"
+          :main="row.container.background"
+          :activeColor="row.page.color"
+        ></theme-icon>
       </div>
       <h3>主题色</h3>
       <div class="theme-box">
@@ -117,6 +126,7 @@ export default defineComponent({
       drawer,
       options,
       state,
+      style,
       themeColorArr,
       drawerChange,
       change

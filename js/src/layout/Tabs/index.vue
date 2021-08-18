@@ -33,10 +33,10 @@
 
 <script>
 import { defineComponent, computed, unref, watch, reactive, ref, nextTick } from 'vue'
+import Item from './item.vue'
 import { useStore } from 'vuex'
 import { useRoute, useRouter } from 'vue-router'
 import tabsHook from './tabsHook'
-import { log } from 'util'
 export default defineComponent({
   components: {
     Item
