@@ -9,9 +9,9 @@ import App from './App.vue'
 import store from './store'
 import router from './router'
 import i18n from './locale'
-if (import.meta.env.MODE !== 'development') { // 非开发环境调用百度统计
-  baidu()
-}
+// if (import.meta.env.MODE !== 'development') { // 非开发环境调用百度统计
+//   baidu()
+// }
 const app = createApp(App)
 app.use(ElementPlus, { size: store.state.app.elementSize, i18n: i18n.global.t })
 app.use(store)
